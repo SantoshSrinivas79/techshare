@@ -1,0 +1,62 @@
+#internal-error {
+    position: fixed;
+    width: 500px;
+    margin: 0 auto; /* Will not center vertically and won't work in IE6/7. */
+    left: 0;
+    right: 0;
+    top: 0;
+    text-align: center;
+}
+
+#banner {
+    padding: 50px;
+    /*background-color: beige;*/
+    font-size: 20px;
+    text-align: center;
+    background-image: url('/banner2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    height: 300px;
+    border-radius: 12px;
+    margin: auto;
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#banner .remove {
+    position: absolute;
+    right: 8px;
+    top: -6px;
+    font-size: 27px;
+    color: white;
+    text-decoration: none;
+}
+
+#banner .login-btn {
+    color: black;
+    border: 1px solid white;
+    background-color: rgba(255, 253, 253, 0.88);
+    padding-left: 40px;
+    padding-right: 40px;
+    position: absolute;
+    bottom: 84px;
+    left: 42%;
+    font-size: 16px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+#banner .login-btn:hover{
+    color: white;
+    background-color: transparent;
+}
+
+#banner-text{
+    margin: 0;
+    position: absolute;
+    top: 37%;
+    left: 4%;
+    text-align: center;
+}

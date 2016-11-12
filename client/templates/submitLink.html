@@ -1,0 +1,75 @@
+<!-- Boostrap modal -->
+<template name="submitLink">
+    <!-- Modal -->
+    <div id="submitModal" class="modal fade" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h5 class="modal-title">Add a link</h5>
+                    <div class="submit-error">{{errorMessage 'internal'}}</div>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div id="link-form-group" class="form-group">
+                            <!--<label for="inputLink">Add a link</label>-->
+                            <input autofocus="autofocus" autocomplete="off" name="inputLink" type="text"
+                                   class="form-control  {{#if inputLinkError}}input-error{{/if}}" placeholder=""/>
+                            <i class="fa fa-link"></i>
+                        </div>
+                        <div class="submit-error">
+                            {{errorMessage 'url'}}
+                        </div>
+                        <div id="tag-form-group" class="form-group">
+                            <label for="tag">Attach a Tag</label>
+
+                            <div id="input-tag-container" class="form-control">
+                                <div id="selected-tag-list"></div>
+                                <input id="input-tag" autocomplete="off" name="tag" type="text"
+                                       placeholder="java, python etc. (max 3)"/>
+                            </div>
+                            {{#if suggestedTags}}
+                                <ul class="typeahead">
+                                    {{#each suggestedTags}}
+                                        <li>{{name}}</li>
+                                    {{/each}}
+                                </ul>
+                            {{/if}}
+                        </div>
+                        <div class="submit-error">
+                            {{errorMessage 'tags'}}
+                        </div>
+                        <div id="category-form-group" class="form-group">
+                            <label for="categories">Select a Category</label>
+                            <select id="inputCategory" name="categories" class="form-control">
+                                <option value="tutorial">Tutorial</option>
+                                <option value="blog">Blog</option>
+                                <option value="video">Video</option>
+                                <option value="github">Github project</option>
+                                <option value="tool">Tool (Library, Framework, IDE etc.)</option>
+                                <option value="tweet">Tweet</option>
+                            </select>
+                        </div>
+                        {{> reCAPTCHA}}
+
+                        <div class="submit-error">
+                            {{errorMessage 'captcha'}}
+                        </div>
+
+                        <div id="submit-form-group" class="form-group">
+                            {{#if waitForSubmit}}
+                                <img src="spinner.gif" alt=""/>
+                            {{/if}}
+                            <input id="submitLink" type="button" value="Submit" class="btn btn-default"/>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+

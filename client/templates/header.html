@@ -1,0 +1,100 @@
+<template name="header">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/"><img src="/logo3.png" alt=""/>TechShare</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <ul class="main-menu nav navbar-nav navbar-left">
+                <li class="menu-item {{activeRouteClass 'home'}}">
+                    <a href="/"><i class="fa fa-home"></i>Home</a>
+                </li>
+                {{#if currentUser}}
+                    <li class="menu-item {{activeRouteClass 'feed'}} {{activeRouteClass 'feed.popular'}}">
+                        <a href="/feed"><i class="fa fa-rss"></i>Your Feed</a>
+                    </li>
+                {{/if}}
+                <li class="menu-item {{activeRouteClass 'tags'}}">
+                    <a href="/tags"><i class="fa fa-tags"></i>Tags</a>
+                </li>
+                <li class="menu-item {{activeRouteClass 'about'}}">
+                    <a href="/about"><i class="fa fa-question-circle"></i>About</a>
+                </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                {{#if currentUser}}
+                    <li class="menu-item {{activeRouteClass 'notifications'}}">
+                        <a href="/notifications"><i class="fa fa-bell-o"></i></a>
+                        {{#if notificationCount}}
+                            <span class="notif-count">{{notificationCount}}</span>
+                        {{/if}}
+                    </li>
+                    <li class="menu-item">
+                        <a id="add-link" href=""><i class="icon-plus"></i></a>
+                    </li>
+                {{/if}}
+                <li class="dropdown">
+                    {{#if currentUser}}
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true"
+                           aria-expanded="false">
+                            <img id="profile-pic" src="{{currentUser.profile.pic}}" alt=""/>
+                            <!--{{currentUser.profile.name}}-->
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="/user/{{currentUser.slug}}">Profile</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#" id="nav-logout">Logout</a>
+                            </li>
+                        </ul>
+                    {{else}}
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                           aria-haspopup="true"
+                           aria-expanded="false" data-action="login-popup">
+                            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                            Login/Register
+                        </a>
+                    {{/if}}
+                </li>
+            </ul>
+            <form id="search-form" class="navbar-form navbar-right" role="search">
+                <div id="search-form-group" class="form-group">
+                    <i class="fa fa-search icon"></i>
+                    <div id="selected-search-tag-list"></div>
+                    <input id="search-input" type="text" class="form-control" placeholder="Search by tags">
+                    {{#if showSuggestions}}
+                        {{#if suggestedTags}}
+                            <ul class="typeahead">
+                                {{#each suggestedTags}}
+                                    <li>{{name}}</li>
+                                {{/each}}
+                            </ul>
+                        {{/if}}
+                    {{/if}}
+                </div>
+            </form>
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <ul class="secondary-menu">
+        <li class="menu-item {{activeRouteClass 'home'}}">
+            <a href="/"><i class="fa fa-home"></i>Home</a>
+        </li>
+        {{#if currentUser}}
+            <li class="menu-item {{activeRouteClass 'feed'}} {{activeRouteClass 'feed.popular'}}">
+                <a href="/feed"><i class="fa fa-rss"></i>Feed</a>
+            </li>
+        {{/if}}
+        <li class="menu-item {{activeRouteClass 'tags'}}">
+            <a href="/tags"><i class="fa fa-tags"></i>Tags</a>
+        </li>
+        <li class="menu-item {{activeRouteClass 'about'}}">
+            <a href="/about"><i class="fa fa-question-circle"></i>About</a>
+        </li>
+    </ul>
+</template>

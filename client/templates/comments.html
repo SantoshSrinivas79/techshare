@@ -1,0 +1,83 @@
+<template name="viewComments">
+    <div class="view-comments-wrapper center-block">
+        <div class="tile-details">
+            {{> tileDetails}}
+        </div>
+        <div>
+            {{>comments}}
+        </div>
+    </div>
+</template>
+
+<template name="tileDetails">
+    <div class="tile-content clearfix">
+        <div class="header">
+            <a href="/user/{{author.slug}}">
+                <img src="{{author.pic}}" alt=""/>{{author.name}}
+                <span>{{time}}</span>
+            </a>
+            <span> • </span><span>{{timediff posted}}</span>
+        </div>
+        <div class="tile-thumbnail" style="background-image: url({{thumbnail_url}})"></div>
+        <div class="tile-body">
+            <h2 class="title">
+                <a class="tile-link" href="{{url}}" target="_blank">{{title}}</a>
+            </h2>
+            <div class="tile-desc">{{description}}</div>
+        </div>
+    </div>
+    <div class="tile-tags">
+        {{#each tags}}
+            <a href="/tags/{{encode .}}" class="tag-name">{{.}}</a>
+        {{/each}}
+        <a href="#" class="category">{{category}}</a>
+    </div>
+    {{>tileFooter}}
+</template>
+
+<template name="comments">
+    {{#if currentUser}}
+        <form action="">
+        <textarea class="form-control" name="" id="input-comment" cols="30" rows="10"
+                  placeholder="Write a comment..."></textarea>
+
+            <div id="input-comment-bottom" class="form-group">
+                <input id="submit-comment" type="button" class="btn btn-primary" value="Post"/>
+            </div>
+        </form>
+    {{/if}}
+    {{#each comments}}
+        {{>comment}}
+    {{/each}}
+</template>
+
+<template name="comment">
+    <div class="comment" data-id="{{_id}}">
+        <div class="comment-header">
+            <a href="" class="goto-author"><img src="{{author.pic}}" alt=""/></a>
+            <span class="author-name">{{author.name}}</span>
+            <span>·</span><span class="time">{{timediff posted}}</span>
+        </div>
+        <div class="comment-text">
+            {{text}}
+        </div>
+        {{#if currentUser}}
+            <div class="comment-footer">
+                <a href="" class="reply-btn"><i class="fa fa-reply"></i><span>Reply</span></a>
+                <a href="" class="delete-btn"><i class="fa fa-times"></i><span>Delete</span></a>
+                <div class="input-reply">
+                    <textarea class="form-control" name="" id="" cols="30" rows="3" placeholder="Reply..."></textarea>
+
+                    <div class="input-reply-bottom">
+                        <input data-parent-id="{{_id}}" type="button" class="btn btn-info post-reply" value="Post"/>
+                        <input type="button" class="btn btn-secondary cancel-reply" value="Cancel"/>
+                    </div>
+                </div>
+            </div>
+        {{/if}}
+        {{#each subComments}}
+            {{>comment}}
+        {{/each}}
+    </div>
+
+</template>

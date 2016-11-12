@@ -1,0 +1,28 @@
+{
+  "public": {
+    "captchaKey": ""
+  },
+  "private": {
+    "oAuth": {
+      "facebook": {
+        "appId": "",
+        "secret": ""
+      },
+      "github": {
+        "clientId": "",
+        "secret": "",
+        "loginStyle": "popup"
+      },
+      "google": {
+        "clientId": "",
+        "secret": "",
+        "loginStyle": "popup"
+      },
+      "twitter": {
+        "consumerKey": "",
+        "secret": ""
+      }
+    },
+    "captchaKey": "6LcfixsTAAAAAHwfQk2mt0TjGS1JK6HjelNE2PP2"
+  }
+}

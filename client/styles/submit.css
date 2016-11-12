@@ -1,0 +1,131 @@
+#submitModal {
+}
+
+#submitModal .modal-content {
+    border-radius: 0;
+    cursor: auto;
+}
+
+#submitModal label {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#submitModal .form-control {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+#submitModal.fade .modal-dialog {
+    transform: translate(0, 0%);
+}
+
+#submitModal .fa-link {
+    position: absolute;
+    top: 12px;
+    left: 4px;
+    color: #ccc;
+    font-size: 15px;
+}
+
+#link-form-group {
+    position: relative;
+}
+
+#category-form-group {
+    /*margin-right: 7%;*/
+}
+
+#category-form-group, #tag-form-group {
+    /*display: inline-block;*/
+    /*width: 46%;*/
+    margin-top: 20px;
+}
+
+#tag-form-group {
+    position: relative;
+}
+
+#submit-form-group {
+    text-align: right;
+    margin-top: 14px;
+    margin-bottom: 0px;
+}
+
+#submit-form-group img {
+    width: 40px;
+}
+
+#submitModal [name='inputLink'] {
+    padding-left: 30px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-radius: 0;
+}
+
+#submitModal [name='inputLink']:focus {
+    border-bottom-color: #2372bc;
+}
+
+.typeahead {
+    list-style: none;
+    border: 1px solid #C7C7C7;
+    border-radius: 4px;
+    position: absolute;
+    width: 100%;
+    padding: 0px;
+    background-color: white;
+    z-index: 10;
+    left: 0px;
+}
+
+.typeahead li {
+    padding: 5px 10px;
+}
+
+.typeahead li:hover {
+    cursor: pointer;
+    background-color: #78c6ff;
+}
+
+#selected-tag-list {
+    display: inline-block;
+}
+
+.selected-tag {
+    color: #f5f5f5;
+    padding: 5px 5px 6px 13px;
+    border-radius: 3px;
+    margin-right: 2px;
+    background-color: #4B98DC;
+}
+
+.selected-tag .remove-tag {
+    margin-left: 6px;
+}
+
+.selected-tag .remove-tag:hover {
+    color: #aeaeae;
+    cursor: pointer;
+}
+
+#input-tag {
+    outline: none;
+    border: none;
+    height: 100%;
+    width: 99%;
+}
+
+#input-tag-container {
+    padding: 0 0 0 2px;
+}
+
+.input-error {
+    border-color: #ff464a;
+}
+
+.submit-error {
+    color: #ff464a;
+}

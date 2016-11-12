@@ -1,0 +1,27 @@
+body {
+    background-color: #e0e0e0;
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+.modal-content {
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+}
+
+button, .btn, .btn:focus, .btn:active {
+    outline: none;
+}
+
+@media only screen and (min-width: 320px){
+    #wrapper{
+        /*padding-left: 50px;*/
+    }
+}
+
+@media only screen and (min-width: 992px){
+    #wrapper{
+        /*padding-left: 250px;*/
+    }
+}

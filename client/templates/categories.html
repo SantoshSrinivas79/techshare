@@ -1,0 +1,25 @@
+<template name="categories">
+    <ul class="categories center-block">
+        <li class="category {{#if isSelectedAll}}active{{/if}}">
+            <a href="/tags/{{tag}}/"><i class="fa fa-asterisk"></i>All</a>
+        </li>
+        <li class="category {{#if isSelected 'tutorial'}}active{{/if}}">
+            <a href="/tags/{{tag}}/category/tutorial"><i class="fa fa-list"></i>Tutorials</a>
+        </li>
+        <li class="category {{#if isSelected 'blog'}}active{{/if}}">
+            <a href="/tags/{{tag}}/category/blog"><i class="fa fa-wordpress"></i>Blogs</a>
+        </li>
+        <li class="category {{#if isSelected 'book'}}active{{/if}}">
+            <a href="/tags/{{tag}}/category/book"><i class="fa fa-book"></i>Books</a>
+        </li>
+        <li class="category {{#if isSelected 'video'}}active{{/if}}">
+            <a href="/tags/{{tag}}/category/video"><i class="fa fa-play-circle"></i>Videos</a>
+        </li>
+        <li class="category {{#if isSelected 'github'}}active{{/if}}">
+            <a href="/tags/{{tag}}/category/github"><i class="fa fa-github"></i>Github</a>
+        </li>
+        <li class="category {{#if isSelected 'tool'}}active{{/if}}">
+            <a href="/tags/{{tag}}/category/tool"><i class="fa fa-wrench"></i>Tools</a>
+        </li>
+    </ul>
+</template>

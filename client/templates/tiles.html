@@ -1,0 +1,111 @@
+<template name="tilesGrid">
+    {{>submenu}}
+    <div id="main-content">
+        <div class="container">
+            {{#if feedEmpty}}
+                <div class="empty-feed-message center-block">
+                    New to TechShare?
+                    <a href="/tags">Subscribe to some tags</a>
+                    to get personalized feed.
+                </div>
+            {{else}}
+            {{/if}}
+            <div class="row">
+                {{#each tiles}}
+                    <div class="col-lg-4 col-md-4 tile-container">
+                        {{> tile}}
+                    </div>
+                {{/each}}
+            </div>
+            <div class="loading-spinner">
+                {{#if loading}}
+                    <img src="/spinner.gif" alt=""/>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name="tile">
+    <div class="tile">
+        <div class="author">
+            <a href="/user/{{author.slug}}">
+                <img src="{{author.pic}}" alt=""/>{{author.name}}
+                <span>{{time}}</span>
+            </a>
+            <span> • </span><span>{{timediff posted}}</span>
+        </div>
+        <div class="tile-tags">
+            {{#each tags}}
+                <a href="/tags/{{encode .}}" class="tag-name">{{.}}</a>
+            {{/each}}
+            <a href="/tags/all/category/{{category}}" class="category">{{category}}</a>
+        </div>
+        <a class="tile-link" href="{{url}}" target="_blank">
+            <div class="title">{{title}}</div>
+            {{#if thumbnail_url}}
+                <div class="thumb" style="background-image: url({{thumbnail_url}});"></div>
+            {{else}}
+                <div class="desc">{{description}}</div>
+            {{/if}}
+        </a>
+        {{#if currentUser}}
+            <span class="dropdown tile-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                   aria-haspopup="true"
+                   aria-expanded="false">
+                    <i class="fa fa-ellipsis-v"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    {{#unless ownsTile}}
+                        <li>
+                            <a class="save-link" href=""><i class="fa fa-bookmark"></i>Save</a>
+                        </li>
+                    {{else}}
+                        <li>
+                            <a class="delete-tile" href=""><i class="fa fa-close"></i>Delete</a>
+                        </li>
+                    {{/unless}}
+                </ul>
+        </span>
+        {{/if}}
+        {{>tileFooter}}
+    </div>
+</template>
+
+<template name="tileFooter">
+    <div class="footer">
+        {{#if liked}}
+            <a href="" class="fa fa-star like liked"></a>
+        {{else}}
+            <a href="" class="fa fa-star like"></a>
+        {{/if}}
+        <span class="count">{{likeCountMod}}</span>
+        <!--<a href="/{{_id}}/comments" class="fa fa-comment goto-comment"></a>-->
+        <a href="/{{slug}}/comments" class="fa fa-comment goto-comment"></a>
+        <span class="count">{{commentCountMod}}</span>
+        <span class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+               aria-haspopup="true"
+               aria-expanded="false">
+                <i class="fa fa-share"></i>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                    <a class="share-btn fb">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                    <a class="share-btn tw" target="_blank"
+                       href="https://twitter.com/intent/tweet?text={{title}}&url={{url}}&via=techshare"
+                            ><i class="fa fa-twitter"></i>
+                    </a>
+                    <a class="share-btn rdt"
+                       href='//www.reddit.com/submit?url={{url}}' target="_blank">
+                        <i class="fa fa-reddit-alien"></i>
+                    </a>
+                </li>
+            </ul>
+        </span>
+        <span class="domain">{{domain}}</span>
+    </div>
+</template>

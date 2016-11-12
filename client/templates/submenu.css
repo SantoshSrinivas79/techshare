@@ -1,0 +1,27 @@
+
+.submenu {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.submenu .dropdown {
+    display: inline-block;
+    margin-right: 15px;
+}
+.submenu .dropdown > a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.submenu  .glyphicon-menu-down {
+    font-size: 9px;
+    color: grey;
+    font-weight: 600;
+}
+
+.submenu .fa {
+    margin-right: 10px;
+}

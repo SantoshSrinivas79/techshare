@@ -1,0 +1,62 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      style="font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif; box-sizing: border-box; font-size: 14px; margin: 0; padding: 0;">
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title></title>
+    <style>
+
+        .email .body {
+            padding: 20px;
+            border: 1px solid #eee;
+            color: #6d6d6d;
+            line-height: 1.2;
+        }
+
+        .email .header {
+            background-color: black;
+            color: white;
+            padding: 5px;
+        }
+
+        .email .header img {
+            width: 16px;
+        }
+
+        .email .header .logo {
+            display: inline-block;
+        }
+
+        .email .header h2 {
+            display: inline-block;
+            padding: 0px;
+            margin: 0px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="email">
+    <div class="header" style="  background-color: black; color: white; padding: 5px;">
+        <div class="logo" style="display: inline-block">
+            <img src="http://techshare-61762.onmodulus.net/logo_mail.png" alt="logo" width="16px"/>
+        </div>
+        <h2 style="display: inline-block; padding: 0; margin: 0;">TechShare</h2>
+    </div>
+    <div class="body" style="padding: 10px; border: 1px solid #eee;">
+        <p>Hello {{username}},</p>
+
+        {{{body}}}
+        <p>
+            - VJ
+        </p>
+    </div>
+    <div class="footer">
+        <p>
+            <a href="https://twitter.com/techshareio">Follow @techshareio for updates</a>
+        </p>
+    </div>
+</div>
+</body>
+</html>

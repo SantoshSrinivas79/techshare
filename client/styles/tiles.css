@@ -1,0 +1,284 @@
+/* ---------------------------- Tile Styles ----------------------------- */
+
+.tile-container{
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+
+.tile {
+    background-color: white;
+    border: 1px solid #ededf0;
+    border-bottom: 1px solid #dcdce0;
+    height: 330px;
+    position: relative;
+    /*overflow: hidden;*/
+    /*hides  menus for share and delete*/
+}
+
+.fade-in {
+    opacity: 1 !important;
+    transition: all 0.3s ease 0.5s !important;
+}
+
+.fade-out {
+    opacity: 0 !important;
+    transition: all 1s ease 1s !important;
+}
+
+.tile .title {
+    padding: .7em;
+    color: #313131;
+    overflow: hidden;
+    font-weight: 600;
+    font-size: 1.2em;
+    max-height: 62px;
+}
+
+.tile:hover .title {
+    color: #F66539;
+}
+
+.tile .tile-link {
+    text-decoration: none;
+    color: black;
+}
+
+.tile-tags {
+    padding-left: 12px;
+    font-size: 12px;
+    padding-top: 6px;
+    font-weight: 500;
+    padding-bottom: 3px;
+}
+
+.tile-tags .tag-name {
+    display: inline-block;
+    padding: 1px 6px 3px;
+    border-radius: 3px;
+    border: 1px solid #CFE8FD;
+    margin-right: 4px;
+    color: #2e9fff;
+    text-decoration: none;
+}
+
+ .tile-tags .tag-name:hover {
+    border: 1px solid #2e9fff;
+}
+
+.tile .author {
+    padding-left: 10px;
+    padding-top: 5px;
+    color: grey;
+    font-size: 11px;
+}
+
+.tile .author a {
+    color: grey;
+    font-size: 11px;
+}
+
+.tile .author img {
+    width: 15px;
+    margin-right: 4px;
+    border-radius: 2px;
+}
+
+.tile .desc {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.tile .thumb > img {
+    width: 100%;
+    height: 150px;
+}
+
+.tile .thumb {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 180px;
+}
+
+.tile .fa {
+    color: #aaa;
+}
+
+.tile .fa:hover {
+    color: #717171;
+}
+
+.tile .fa-star {
+    font-size: 15px;
+}
+
+.tile .footer {
+    padding-top: .7em;
+    padding-bottom: .7em;
+    position: absolute;
+    bottom: 0px;
+    padding-left: .7em;
+    width: 100%;
+    font-size: 13px;
+}
+
+.tile .footer a {
+    text-decoration: none;
+}
+
+.tile .footer .count {
+    margin-right: 10px;
+    color: #aaa;
+}
+
+.tile .footer .fa-share {
+    margin-right: 10px;
+}
+
+.tile .footer .liked {
+    color: #eecd49;
+}
+
+.tile .footer .dropdown-menu::before {
+    border-bottom: 11px solid rgba(0, 0, 0, 0.2);
+    border-left: 11px solid rgba(0, 0, 0, 0);
+    border-right: 11px solid rgba(0, 0, 0, 0);
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 72px;
+    top: -11px;
+}
+
+.tile .footer .dropdown-menu::after {
+    border-bottom: 11px solid #FFFFFF;
+    border-left: 11px solid rgba(0, 0, 0, 0);
+    border-right: 11px solid rgba(0, 0, 0, 0);
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 72px;
+    top: -10px;
+}
+
+.tile .footer .dropdown-menu {
+    left: -80px;
+    top: 126%;
+}
+
+.tile .footer .share-btn {
+    display: inline-block;
+    padding: 3px 19px;
+}
+
+.tile .footer .author {
+    float: right;
+    padding-right: 5px;
+}
+
+.tile .footer .author a {
+    text-decoration: none;
+    color: grey;
+}
+
+.tile .footer .author img {
+    width: 20px;
+    border-radius: 3px;
+    margin-left: 4px;
+}
+
+.tile .share-btn {
+    cursor: pointer;
+}
+
+.tile .share-btn:hover {
+    background-color: white;
+}
+
+.tile .share-btn .fa {
+    color: #464444;
+}
+
+.tile .share-btn.fb:hover .fa {
+    color: #586ccb;
+}
+
+.tile .share-btn.tw:hover .fa {
+    color: #47cff1;
+}
+
+.tile .share-btn.rdt:hover .fa {
+    color: #f1535f;
+}
+
+.tile .tile-menu {
+    position: absolute;
+    bottom: 5px;
+    right: 0px;
+    z-index: 5;
+}
+
+.tile .tile-menu .dropdown-toggle {
+    padding: 3px 11px;
+}
+
+.tile .tile-menu .dropdown-toggle:hover {
+    background-color: #ededed;
+}
+
+.tile .tile-menu .dropdown-menu {
+    left: auto;
+    right: 0px;
+    top: 110%;
+}
+
+.tile .tile-menu .dropdown-menu::before {
+    border-bottom: 9px solid rgba(0, 0, 0, 0.2);
+    border-left: 9px solid rgba(0, 0, 0, 0);
+    border-right: 9px solid rgba(0, 0, 0, 0);
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: 3px;
+    top: -9px;
+}
+
+.tile .tile-menu .dropdown-menu::after {
+    border-bottom: 9px solid #FFFFFF;
+    border-left: 9px solid rgba(0, 0, 0, 0);
+    border-right: 9px solid rgba(0, 0, 0, 0);
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: 3px;
+    top: -8px;
+}
+
+.tile .tile-menu .dropdown-menu .fa {
+    margin-right: 10px;
+}
+
+.empty-feed-message {
+    padding: 15px;
+    width: 100%;
+    font-size: 17px;
+    font-weight: 300;
+    background-color: #FFF;
+    margin-top: 20px;
+    text-align: center;
+    border-bottom: 1px solid #DCDCDC;
+}
+
+.tile .delete-tile {
+    color: #ff4f4f;
+}
+
+.footer {
+    position: relative;
+}
+.footer .domain {
+    color: grey;
+    position:absolute;
+    right: 42px;
+}

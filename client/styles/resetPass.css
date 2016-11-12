@@ -1,0 +1,33 @@
+#reset-password-form .form-group{
+    margin-bottom: 10px;
+}
+
+#reset-password-form .form-control{
+    box-shadow: none;
+    border-radius: 4px;
+    padding: 6px 15px;
+    font-weight: 200;
+}
+
+#reset-password-form .btn {
+    width: 100%;
+    margin-bottom: 20px;
+    padding :10px;
+    font-size: 15px;
+}
+
+#reset-password-container {
+    background-color: white;
+    padding: 37px 77px;
+}
+
+#reset-password-container .error{
+    text-align: center;
+    background-color: #FD5E5E;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-weight: 300;
+    margin-left: -77px;
+    margin-right: -77px;
+}

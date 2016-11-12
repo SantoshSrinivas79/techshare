@@ -1,0 +1,53 @@
+<template name="submenu">
+    <div class="submenu">
+
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="true">
+                <span class="select-text">{{selectedCategory}}</span>
+                <span class="glyphicon glyphicon-menu-down"></span>
+            </a>
+            <ul id="categories-menu" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li  class="category">
+                    <a data-cat="All" href="/tags/{{tag}}/{{queryParam}}"><i class="fa fa-asterisk"></i>All</a>
+                </li>
+                <li  class="category">
+                    <a data-cat="Tutorials" href="/tags/{{tag}}/category/tutorial{{queryParam}}"><i class="fa fa-list"></i>Tutorials</a>
+                </li>
+                <li  class="category">
+                    <a data-cat="Blogs" href="/tags/{{tag}}/category/blog{{queryParam}}"><i class="fa fa-wordpress"></i>Blogs</a>
+                </li>
+                <li  class="category">
+                    <a data-cat="Books" href="/tags/{{tag}}/category/book{{queryParam}}"><i class="fa fa-book"></i>Books</a>
+                </li>
+                <li  class="category">
+                    <a data-cat="Videos" href="/tags/{{tag}}/category/video{{queryParam}}"><i class="fa fa-play-circle"></i>Videos</a>
+                </li>
+                <li  class="category">
+                    <a data-cat="Projects" href="/tags/{{tag}}/category/projects{{queryParam}}"><i class="fa fa-github"></i>Projects</a>
+                </li>
+                <li class="category">
+                    <a data-cat="Tools"  href="/tags/{{tag}}/category/tool{{queryParam}}"><i class="fa fa-wrench"></i>Tools</a>
+                </li>
+                <li class="category">
+                    <a data-cat="Tools"  href="/tags/{{tag}}/category/tool{{queryParam}}"><i class="fa fa-twitter"></i>Tweets</a>
+                </li>
+            </ul>
+        </div>
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="true">
+                {{selectedSort}}
+                <span class="glyphicon glyphicon-menu-down"></span>
+            </a>
+            <ul id="sort-menu" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li class="sort-criteria">
+                    <a data-sort="New" href="{{currentPath}}?sort_by=new"><i class="fa fa-clock-o"></i>New</a>
+                </li>
+                <li class="sort-criteria">
+                    <a data-sort="Popular" href="{{currentPath}}?sort_by=popular"><i class="fa fa-star-o"></i>Popular</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</template>

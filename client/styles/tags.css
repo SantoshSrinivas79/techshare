@@ -1,0 +1,153 @@
+#sidebar {
+    position: fixed;
+    height: 100%;
+    left: 2px;
+    overflow: auto;
+    border-right: 1px solid #e0e3e9;
+    background-color: white;
+    padding-top: 20px;
+}
+
+@media handheld, screen and (min-width: 320px) {
+    .tags-wrapper {
+        width: 100%;
+        background-color: white;
+    }
+
+    .tag-name-wrapper {
+        width: 28%;
+    }
+
+    .follow-wrapper {
+        width: 70%;
+    }
+
+    .tag-stat {
+        width: 25%;
+    }
+
+    .follow-btn-wrapper {
+        width: 46%;
+    }
+}
+
+@media handheld, screen and (min-width: 760px) {
+    .tags-wrapper {
+        width: 100%;
+        background-color: white;
+    }
+}
+
+@media handheld, screen and (min-width: 1400px) {
+    .tags-wrapper {
+        width: 60%;
+        background-color: white;
+    }
+
+    .tag-name-wrapper {
+        width: 50%;
+    }
+
+    .follow-wrapper {
+        width: 49%;
+    }
+
+    .tag-stat {
+        width: 36%;
+    }
+
+    .follow-btn-wrapper {
+        width: 26%;
+    }
+}
+
+#tag-filter-container {
+    position: relative;
+    margin-bottom: 10px;
+    padding: 15px;
+}
+
+#tag-filter-container .icon {
+    position: absolute;
+    color: #BDBBBB;
+    top: 40%;
+    left: 22px;
+}
+
+#input-tag-filter {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    padding-left: 30px;
+    background-color: #f4f4f4;
+    width: 30%;
+}
+
+#input-tag-filter:focus {
+    background-color: white;
+}
+
+.tags {
+    height: 100%;
+    padding: 0;
+}
+
+.tag {
+    list-style-type: none;
+    display: block;
+    border-bottom: 1px solid #eff3fa;
+    padding: 15px;
+}
+
+.tag-name-wrapper {
+    display: inline-block;
+}
+
+.follow-wrapper {
+    display: inline-block;
+}
+
+.tag-stat {
+    display: inline-block;
+}
+
+.follow-btn-wrapper {
+    display: inline-block;
+    text-align: right;
+    vertical-align: top;
+}
+
+.tag .tag-name {
+    display: inline-block;
+    text-decoration: none;
+    padding: 2px 21px 3px;
+    border-radius: 21px;
+    border: 1px solid #5cb767;
+    color: #5cb767;
+    font-weight: 300;
+}
+
+.tag .tag-name:hover {
+    color: white;
+    background-color: #5cb767;
+}
+
+.tag .follow-btn {
+    display: inline-block;
+    padding: 6px 11px 7px;
+    border-radius: 3px;
+    border: 0px;
+    color: white;
+    background-color: #2e9fff;
+    text-decoration: none;
+}
+
+.tag .follow-btn.active {
+    background-color: #5cb767;
+}
+
+.tag .tag-stat-subtext {
+    font-size: 12px;
+    color: #7f919e;
+    margin: -4px 0 0;
+}

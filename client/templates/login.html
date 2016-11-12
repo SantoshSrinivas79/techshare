@@ -1,0 +1,93 @@
+<template name="login">
+    <div id="loginModal" class="modal fade in" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header" style="border-bottom: none;">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    {{#if showSignup}}
+                        <h4 class="modal-title">SIGN UP</h4>
+                    {{else}}
+                        <h4 class="modal-title">LOG IN</h4>
+                    {{/if}}
+                </div>
+                <div class="modal-body">
+                    {{#if isLoginServicesConfigured}}
+                        <div class="social">
+                            <a href="" data-action="github-login"><i class="fa fa-github"></i></a>
+                            <a href="" data-action="google-login"><i class="fa fa-google"></i></a>
+                            <!--<a href="" data-action="twitter-login"><i class="fa fa-twitter"></i></a>-->
+                            <a href="" data-action="facebook-login"><i class="fa fa-facebook"></i></a>
+                        </div>
+                        <div class="divider">
+                            <div class="line left"></div>
+                            <span>OR</span>
+
+                            <div class="line right"></div>
+                        </div>
+                    {{/if}}
+                    {{#if loginError}}
+                        <div class="error">
+                            <span>{{loginError}}</span>
+                        </div>
+                    {{/if}}
+                    {{#unless showSignup}}
+                        <form id="login-form" role="form">
+                            <div class="form-group">
+                                <input autofocus type="text" class="form-control" id="login-username"
+                                       placeholder="Email" tabindex="1">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="login-password"
+                                       placeholder="Password" tabindex="2">
+                            </div>
+                            <a id="loginButton" type="submit" class="btn btn-primary" value="LOGIN" tabindex="3">LOGIN
+                                {{#if operationInProgress}}
+                                    <img class="spinner" src="spinner.svg">
+                                {{/if}}
+                            </a>
+                        </form>
+                    {{/unless}}
+                    {{#if showSignup}}
+                        <form id="signup-form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="create-user-username"
+                                       placeholder="User Name" tabindex="1" autofocus>
+                            </div>
+                            <div class="form-group" id="email-control-group">
+                                <input type="text" class="form-control" id="create-user-email" placeholder="Email"
+                                       tabindex="2">
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="create-user-password"
+                                       placeholder="Password" tabindex="3">
+                            </div>
+                            <div class="form-group" id="confirm-pass-control-group">
+                                <input type="password" class="form-control" id="create-user-password-confirm"
+                                       placeholder="Confirm Password" tabindex="3">
+                            </div>
+                            <a id="signupButton" type="submit" class="btn btn-primary" tabindex="0">CREATE ACCOUNT
+                                {{#if operationInProgress}}
+                                    <img class="spinner" src="spinner.svg">
+                                {{/if}}
+                            </a>
+                        </form>
+                    {{/if}}
+                </div>
+                <div class="modal-footer">
+                    {{#if showSignup}}
+                        <span>Already have an account?</span>
+                        <a id="goto-login" href="">Log in!</a>
+                    {{else}}
+                        <span>Don't have an account?</span>
+                        <a id="goto-signup" href="">Sign up!</a>
+                        <p>
+                            <a id="forgot-password" href="">Forgot Password?</a>
+                        </p>
+                    {{/if}}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</template>

@@ -1,0 +1,20 @@
+<template name="layout">
+    {{>header}}
+    {{>banner}}
+    <div id="wrapper">
+        {{>yield}}
+    </div>
+    {{>submitLink}}
+    {{>login}}
+</template>
+
+<template name="banner">
+    <div id="banner">
+        <!--A community to find and share useful resources on software and programming.-->
+        <a href="#" class="remove" aria-label="close">&times;</a>
+        <h1 id="banner-text">Share and find the best resources on software and programming</h1>
+        {{#unless currentUser}}
+        <button class="btn login-btn">Login</button>
+        {{/unless}}
+    </div>
+</template>

@@ -1,0 +1,47 @@
+.notifications-wrapper {
+    width: 40%;
+    margin-top: 20px;
+    /*background-color: white;*/
+}
+
+.notification-wrapper {
+    padding: 15px;
+    background-color: white;
+    margin-bottom: 10px;
+    border: 1px solid #DEDEDE;
+}
+
+.notification-wrapper .notif-content {
+    padding-left: 10px;
+    color: grey;
+    border-left: 2px solid #dfdfdf;
+    margin-top: 10px;
+}
+
+.notif {
+    position: relative;
+    padding-left: 40px;
+}
+
+.notif .avatar {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+}
+
+.notif .avatar img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.notif .user-name {
+    font-weight: 500;
+    color: black;
+    text-decoration: none;
+}
+
+.notif .user-name:hover{
+    color: grey;
+}

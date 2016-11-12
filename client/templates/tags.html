@@ -1,0 +1,50 @@
+<template name="tags">
+    <div class="tags-wrapper center-block">
+        <div id="tag-filter-container">
+            <input id="input-tag-filter" type="text" class="form-control" placeholder="search tags..."/>
+            <i class="fa fa-search icon"></i>
+        </div>
+        <ul class="tags">
+            {{#each tags}}
+                <li class="tag">
+                    <div class="tag-name-wrapper">
+                        <a class="tag-name" href="/tags/{{encode name}}/category/all">{{name}}</a>
+                    </div>
+                    <div class="follow-wrapper">
+                        <div class="tag-stat">
+                            <span class="follow-count">
+                                {{#if followerCount}}
+                                    {{followerCount}}
+                                {{else}}
+                                    0
+                                {{/if}}
+                            </span>
+                            <div class="tag-stat-subtext">Followers</div>
+                        </div>
+                        <div class="tag-stat">
+                            <span class="follow-count">
+                                {{#if linkCount}}
+                                    {{linkCount}}
+                                {{else}}
+                                    0
+                                {{/if}}
+                            </span>
+                            <div class="tag-stat-subtext">Posts</div>
+                        </div>
+                        {{#if currentUser}}
+                            <div class="follow-btn-wrapper">
+                                <a href="" class="follow-btn  {{#if followed}}active {{/if}}" data-tag="{{name}}">
+                                    {{#if followed}}
+                                        <i class="fa fa-check"></i>Following
+                                    {{else}}
+                                        Follow
+                                    {{/if}}
+                                </a>
+                            </div>
+                        {{/if}}
+                    </div>
+                </li>
+            {{/each}}
+        </ul>
+    </div>
+</template>

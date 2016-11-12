@@ -1,0 +1,189 @@
+
+.view-comments-wrapper {
+    width: 60%;
+}
+
+.view-comments-wrapper .tile-details {
+    margin-bottom: 20px;
+    background-color: white;
+    border: 1px solid #d8d8d8;
+    padding: 15px;
+}
+
+.view-comments-wrapper .tile-details .tile-link {
+    color: black;
+    text-decoration: none;
+}
+
+.view-comments-wrapper .tile-details .tile-link:hover {
+    color: #2e87e7;
+}
+
+.view-comments-wrapper .tile-details .title {
+    font-size: 22px;
+    word-wrap: break-word;
+    margin: 0;
+    padding: 0;
+}
+
+.view-comments-wrapper .tile-details .tile-desc {
+    color: grey;
+    word-wrap: break-word;
+    padding-right: 10px;
+    padding-top: 10px
+}
+
+.view-comments-wrapper .tile-details .tile-thumbnail {
+    overflow: hidden;
+    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    width: 180px;
+    height: 150px;
+    float: right;
+}
+
+.view-comments-wrapper .tile-details .footer {
+    padding-top: 10px;
+    border-top: 1px solid #d9d9d9;
+}
+
+.view-comments-wrapper .tile-details .footer a {
+    text-decoration: none;
+    color: #65B4F7;
+}
+
+.view-comments-wrapper .tile-details .footer a:hover {
+    text-decoration: none;
+    color: #2e9fff;
+}
+
+.view-comments-wrapper .tile-details .footer .count {
+    margin-right: 15px;
+    color: #546673;
+
+}
+
+.tile-details .header {
+    padding-top: 5px;
+    color: grey;
+    font-size: 11px;
+    margin-bottom: 10px;
+}
+
+.tile-details .header a {
+    color: grey;
+    font-size: 11px;
+}
+
+.tile-details .header img {
+    width: 15px;
+    margin-right: 4px;
+    border-radius: 2px;
+}
+
+#input-comment {
+    height: 75px;
+    width: 100%;
+}
+
+#input-comment-bottom, .input-reply-bottom {
+    margin-top: 10px;
+}
+
+.comment {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 10px 10px;
+    border-radius: 3px;
+    border-left: 1px solid #E0E0E0;
+}
+
+/* nested comments */
+.comment > .comment {
+    margin-left: 20px;
+}
+
+.comment .author-name {
+    font-weight: 600;
+    color: #2372bc;
+}
+
+.comment .comment-text {
+    padding-left: 30px;
+}
+
+.input-reply-bottom .btn {
+    padding: 2px 4px;
+}
+
+.comment-header img {
+    width: 26px;
+    border-radius: 3px;
+}
+
+.comment-header .goto-author {
+    margin-right: 4px;
+}
+
+.comment-header .time {
+    color: #949393;
+    font-size: 12px;
+    font-style: italic;
+    margin-left: 12px;
+}
+
+.comment .comment-footer {
+    color: #949393;
+    font-size: 12px;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+.comment .reply-btn,
+.comment .delete-btn,
+.comment .cancel-reply-btn {
+    text-decoration: none;
+    color: #949393;
+}
+
+.comment .cancel-reply-btn {
+    display: none;
+}
+
+.comment .reply-btn:hover,
+.comment .delete-btn:hover,
+.comment .cancel-reply-btn:hover {
+    color: #5f5e5e;
+}
+
+.comment .reply-btn {
+    margin-right: 20px;
+}
+
+.comment .reply-btn .fa-reply {
+    margin-right: 4px;
+    transform: scale(-1);
+}
+
+.comment .input-reply {
+    display: none;
+    margin-top: 10px;
+}
+
+.tile-tags .category {
+    display: inline-block;
+    padding: 1px 6px 3px;
+    border-radius: 3px;
+    border: 1px solid #fdbab5;
+    margin-right: 4px;
+    color: #ff9e80;
+    text-decoration: none;
+}
+
+.tile-tags .category:hover {
+    border: 1px solid #fd724a;
+}
+

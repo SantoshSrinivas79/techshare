@@ -1,0 +1,29 @@
+<template name="notifications">
+    <div class="notifications-wrapper center-block">
+        {{#each notifications}}
+            <div class="notification-wrapper">
+                {{> notification }}
+            </div>
+        {{/each}}
+    </div>
+</template>
+
+<template name="notification">
+    <div class="notif">
+        <a href="" class="avatar">
+            <img src="{{actor.pic}}" alt=""/>
+        </a>
+        <div class="notif-body">
+            <a class="user-name" href="">{{actor.name}}</a>
+            <span>{{actionDetail}}</span>
+
+            {{#if commented}}
+                <a href="/{{tile.id}}/comments">{{tile.title}}</a>
+                <div class="notif-content">
+                    {{content}}
+                </div>
+            {{else}}
+                <a href="{{tile.url}}" target="_blank">{{tile.title}}</a>
+            {{/if}}</div>
+    </div>
+</template>

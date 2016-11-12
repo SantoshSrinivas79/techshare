@@ -1,0 +1,47 @@
+<template name="userprofile">
+    <div class="userprofile">
+        <div class="user-info-wrapper">
+            <div class="user-info center-block">
+                <div class="profile-pic">
+                    <img src="{{userinfo.profile.pic}}" alt=""/>
+                </div>
+                <div class="user-name">
+                    <h1>{{userinfo.profile.name}}</h1>
+                </div>
+                <span class="stats">{{numPosts}} posts</span>
+            </div>
+        </div>
+        <div class="user-details">
+            <div class="sidebar">
+                <ul>
+                    <li class="{{userPostsActive}}">
+                        <a href="/user/{{userinfo.slug}}/posts">Posts<i class="fa fa-angle-right"></i></a>
+                    </li>
+                    <li class="{{userFollowingActive}}">
+                        <a href="/user/{{userinfo.slug}}/following">Following<i class="fa fa-angle-right"></i></a>
+                    </li>
+                    <li class="{{userSavedActive}}">
+                        <a href="/user/{{userinfo.slug}}/saved">Saved<i class="fa fa-angle-right"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="main-content">
+                {{>yield}}
+            </div>
+        </div>
+    </div>
+</template>
+
+<template name="userTiles">
+    <div class="user-tiles-wrapper center-block">
+        {{#each tiles}}
+            <div class="tile-details">
+                {{> tileDetails}}
+            </div>
+        {{/each}}
+    </div>
+</template>
+
+<template name="userFollowing">
+
+</template>
